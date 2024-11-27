@@ -1,4 +1,3 @@
-/* General Styles */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -196,7 +195,7 @@ nav ul li a:hover {
 .product-box .view-more-btn {
     margin-top: 10px;
     padding: 10px 20px;
-    background-color: #007bff00; /* Different background color */
+    background-color: #007bff00; 
     color: rgb(0, 0, 0);
     border: none;
     border-radius: 5px;
@@ -204,7 +203,7 @@ nav ul li a:hover {
 }
 
 .product-box .view-more-btn:hover {
-    background-color: #52525248; /* Darker background color on hover */
+    background-color: #52525248;
 }
 
 
@@ -370,7 +369,6 @@ footer {
     border: 1px solid #ccc;
     border-radius: 10px;
     padding: 20px;
-    /* height: 700px; */
     width: 250px;
     box-shadow: 0 40px 80px rgba(0, 0, 0, 0.1);
     text-align: center;
@@ -378,19 +376,19 @@ footer {
 }
 .product-box img {
     width: 100%;
-    height: 200px; /* Set a fixed height for all images */
+    height: 200px; 
     object-fit: cover;
     border-radius: 10px;
 }
 .product-box h3 {
-    /* margin: 10px 0; */
+   
     margin-top: auto;
 }
 .product-box p {
     margin: 5px 0;
 }
 .product-box button {
-    /* margin-top: 10px; */
+    
     margin-top: auto;
     padding: 10px 20px;
     background-color: #000000;
@@ -410,11 +408,11 @@ footer {
 /* --------------------------------------------------------------- */
 
 #cart-title {
-    /* text-align: center; */
+   
     padding: 10px;
     background-color: #f4f4f4;
     margin-left: 75px;
-    /* margin-top: 70px; */
+
     
 }
 
@@ -422,7 +420,7 @@ footer {
     display: flex;
     flex-direction: column;
     align-items: center;
-    /* padding: 20px; */
+   
     height: 70vh;
     background-color: #f4f4f4;
     float: left;
@@ -434,7 +432,7 @@ footer {
 
 #cart-container {
     display: flex;
-    flex-direction: column; /* Stack items vertically */
+    flex-direction: column; 
     gap: 20px;
     margin: 20px auto;
     width: 80%; 
@@ -445,7 +443,7 @@ footer {
 .cart-item {
     display: flex;
     align-items: center;
-    justify-content: space-between; /* Spread items within the row */
+    justify-content: space-between; 
     height: 150px;
     border: 1px solid #ccc;
     border-radius: 10px;
@@ -534,7 +532,7 @@ footer {
     width: 100%;
     border-radius: 10px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    /* float: right; */
+  
     margin-right: 80px;
   }
   
@@ -662,10 +660,8 @@ footer {
 .usericon {
     width: 40px;
     height: 40px;
-    /* margin-right: 10px; */
 }
 .dropdown img {
-    /* margin-bottom: -15px; */
     margin: 0px 10px -15px 0px;
 }
 #user-button {
@@ -732,7 +728,7 @@ footer {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
   }
   
-  /* Submit Button */
+
   .checkout-btn {
     display: block;
     width: 100%;
