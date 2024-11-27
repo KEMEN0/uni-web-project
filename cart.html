@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="stylesheet.css">
+    <title>Cart</title>
+    <style>
+
+    </style>
+</head>
+<body>
+       <!-- --------------------------------navigation bar------------------------------------- -->
+
+       <header>
+        <div class="header-container">
+            <div class="logo"><h4><a class="logolink" href="home.html">Express</a></h4></div>
+            <div class="search-bar">
+                <input type="text" placeholder="Search">
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="products.html">Products</a></li>
+                    <li><a href="#">Our Story</a></li>
+                    <li><a href="#">Making of Express</a></li>
+                </ul>
+            </nav>
+          
+            <div class="dropdown">
+                <img src="assets/user.png" alt="User img" class="usericon">
+                <button id="user-button">Sign In</button>
+                <div class="dropdown-content" id="sign-in-form">
+                    <form onsubmit="signIn(event)">
+                        <h3>Sign In</h3>
+                        <input type="text" id="sign-in-username" placeholder="Username" required>
+                        <input type="password" id="sign-in-password" placeholder="Password" required>
+                        <button type="submit">Sign In</button>
+                    </form>
+                    <form onsubmit="signUp(event)">
+                        <h3>Sign Up</h3>
+                        <input type="text" id="first-name" placeholder="First Name" required>
+                        <input type="text" id="last-name" placeholder="Last Name" required>
+                        <input type="text" id="mobile-no" placeholder="Mobile No" required>
+                        <input type="email" id="email" placeholder="E-mail" required>
+                        <input type="text" id="sign-up-username" placeholder="Username" required>
+                        <input type="password" id="sign-up-password" placeholder="Password" required>
+                        <button type="submit">Sign Up</button>
+                    </form>
+                    <button id="sign-out-button" onclick="signOut()">Sign Out</button>
+                </div>
+            </div>
+            <div class="cart-icon">
+                <a href="cart.html"><img src="assets/shopping-cart.png" alt="Cart"></a>
+            </div>
+        </div>
+    </header>
+    <!-- -------------------------------body---------------------------------------- -->
+
+
+
+
+    <h1 id="cart-title">Shoping Cart</h1>
+    <div class="cart-container">
+<div id="cart-body-left">
+    <div id="cart-container"></div>
+   
+</div>
+<div id="cart-body-right">
+    <!-- <div id="total-price">Total: $0</div>
+    <button id="checkout-button">Checkout</button> -->
+    <div class="order-summary">
+        <h2>Order Summary</h2>
+        <form>
+          <label for="discount-code">Discount code / Promo code</label>
+          <input type="text" id="discount-code" placeholder="Code">
+          
+          <label for="bonus-card">Your bonus card number</label>
+          <div class="bonus-card-container">
+            <input type="text" id="bonus-card" placeholder="Enter Card Number">
+            <button class="bonus-card-btn" type="button">Apply</button>
+          </div>
+        </form>
+        <div class="price-details">
+          <p>Estimated Tax <span>$50</span></p>
+          <p>Estimated shipping & Handling <span>$29</span></p>
+    <div id="total-price">Total: $0</div>
+
+        <button class="checkout-btn">Checkout</button>
+      </div>
+</div>
+   </div>
+    </div>
+  
+
+ <script src="main.js"></script>
+<!------------------------------------------ footer ---------------------------------------------------->
+
+<footer>
+    <div class="footer-content">
+        <div class="footer-section">
+            <h3>Services</h3>
+            <ul>
+                <li>Order Tracking</li>
+                <li>Warranty & Returns</li>
+            </ul>
+        </div>
+        <div class="footer-section">
+            <h3>Assistance to Buyer</h3>
+            <ul>
+                <li>FAQ</li>
+                <li>Contact Us</li>
+            </ul>
+        </div>
+        <div class="footer-section">
+            <h3>Follow Us</h3>
+            <ul>
+                <li><a href="#"><img src="https://uxwing.com/wp-content/themes/uxwing/download/brands-and-social-media/instagram-white-icon.png" alt="insta"></a></li>
+                <li><a href="#"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/57/X_logo_2023_%28white%29.png/800px-X_logo_2023_%28white%29.png" alt="Twitter"></a></li>
+            </ul>
+        </div>
+    </div>
+</footer>
+    
+</body>
+
+  
+
+    <!-- ------------------------------------------------------------------------------ -->
+
+
+</html>
