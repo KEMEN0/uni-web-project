@@ -271,6 +271,22 @@ nav ul li a:hover {
     font-size: large;
     border: none;
     cursor: pointer;
+    position: relative;
+}
+
+.tabs button::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 2px;
+    background-color: black;
+    transition: width 0.5s ease;
+}
+
+.tabs button:hover::after {
+    width: 100%;
 }
 
 .products {

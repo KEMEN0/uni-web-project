@@ -212,7 +212,6 @@ const items = [
 
 
 
-
 //--------------------------------------------------------------------------------------
 //----- filter items in home page (new arrivals, best sellers, featured products)-------
 //--------------------------------------------------------------------------------------
@@ -222,6 +221,11 @@ function displayNewArrivals() {
     const newArrivals = sortedItems.slice(0, 3);
     displayProductList(newArrivals);
 }
+
+document.addEventListener('DOMContentLoaded', () => {
+    displayNewArrivals();
+    updateUserButton();
+});
 
 // display best sellers
 function displayBestSellers() {
