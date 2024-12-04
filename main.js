@@ -71,10 +71,29 @@ function updateUserButton() {
     if (loggedInUser) {
         userButton.textContent = loggedInUser;
     } else {
-        userButton.textContent = 'Sign In';
+        userButton.textContent = 'Sign In or register';
     }
 }
 document.addEventListener('DOMContentLoaded', updateUserButton);
+
+
+
+// this will toggle the menu when its clicked 
+document.addEventListener('DOMContentLoaded', () => {
+    const userButton = document.getElementById('user-button');
+    const dropdownContent = document.querySelector('.dropdown-content');
+
+    userButton.addEventListener('click', (event) => {
+        event.stopPropagation();
+        dropdownContent.style.display = dropdownContent.style.display === 'block' ? 'none' : 'block';
+    });
+
+    document.addEventListener('click', (event) => {
+        if (!dropdownContent.contains(event.target) && event.target !== userButton) {
+            dropdownContent.style.display = 'none';
+        }
+    });
+});
 
 
 //--------------------------------------------------------------------------------------------------------------------------
@@ -137,6 +156,123 @@ const items = [
         photo: "https://www.luluhypermarket.com/cdn-cgi/image/f=auto/medias/1200Wx1200H-null?context=bWFzdGVyfGltYWdlc3wxNDQ4OTF8aW1hZ2UvanBlZ3xhRGsyTDJneE9TOHlOamczT0RFM01qZzRPVEV4T0M4eE1qQXdWM2d4TWpBd1NGOXVkV3hzfDcyMmNmODcwYWRmYzkwNTEzZTViZTczYjU4MTdhYTgwOGUxMjc2NmZjYjc4MGQ3MTI1NTlkY2RlMjVmMjA1YmQ"
     },
     {
+        type: "phone",
+        name: "Google Pixel 7 Pro",
+        screen: "6.7 inches",
+        cpu: "Tensor G2",
+        ram: "12 GB",
+        storage: "256 GB",
+        camera: "50 MP",
+        battery: "5000 mAh",
+        price: 899,
+        color: "obsidian",
+        photo: "https://lh3.googleusercontent.com/5qBRAVj82xMbqRBAXs80U-COEfA-8WQ0RFZbux3Du_GBYGHx4fqTTxLUP3XRCGXOfCJss31jKxoHavdlggeqDGYwD6cdmpy6SwM"
+    },
+    {
+        type: "laptop",
+        name: "Dell XPS 15",
+        screen: "15.6 inches",
+        cpu: "Intel i9-12900H",
+        ram: "32 GB",
+        storage: "1 TB",
+        camera: "720p",
+        battery: "8600 mAh",
+        price: 1999,
+        color: "platinum silver",
+        photo: "https://m.media-amazon.com/images/I/717Lo8oZaAL._AC_SL1500_.jpg"
+    },
+    {
+        type: "phone",
+        name: "OnePlus 11",
+        screen: "6.7 inches",
+        cpu: "Snapdragon 8 Gen 2",
+        ram: "16 GB",
+        storage: "512 GB",
+        camera: "50 MP",
+        battery: "5000 mAh",
+        price: 699,
+        color: "eternal green",
+        photo: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSe44qS3XsYY3DsNTObV_QjxYGRvI18DGfEcg&s"
+    },
+    {
+        type: "smartwatch",
+        name: "Samsung Galaxy Watch 5",
+        screen: "1.4 inches",
+        cpu: "Exynos W920",
+        ram: "1.5 GB",
+        storage: "16 GB",
+        camera: "N/A",
+        battery: "410 mAh",
+        price: 279,
+        color: "white",
+        photo: "https://media.extra.com/s/aurora/100317787_800/Samsung-Galaxy-Watch-5%2C-44MM%2C-Silver?locale=en-GB,en-*,*"
+    },
+    {
+        type: "laptop",
+        name: "HP Spectre x360",
+        screen: "13.5 inches",
+        cpu: "Intel i7-1255U",
+        ram: "16 GB",
+        storage: "512 GB",
+        camera: "5 MP",
+        battery: "6600 mAh",
+        price: 1399,
+        color: "nightfall black",
+        photo: "https://pimcdn.sharafdg.com/cdn-cgi/image/width=600,height=600,fit=pad/images/S400887680_1?1725205334"
+    },
+    {
+        type: "tablet",
+        name: "Samsung Galaxy Tab S8 Ultra",
+        screen: "14.6 inches",
+        cpu: "Snapdragon 8 Gen 1",
+        ram: "12 GB",
+        storage: "512 GB",
+        camera: "13 MP",
+        battery: "11200 mAh",
+        price: 1099,
+        color: "graphite",
+        photo: "https://images.samsung.com/is/image/samsung/p6pim/ae/sm-x906bzaamea/gallery/ae-galaxy-tab-s8-ultra-5g-x906-sm-x906bzaamea-534175120?$720_576_JPG$"
+    },
+    {
+        type: "phone",
+        name: "Xiaomi Mi 12 Ultra",
+        screen: "6.73 inches",
+        cpu: "Snapdragon 8 Gen 1",
+        ram: "12 GB",
+        storage: "512 GB",
+        camera: "50 MP",
+        battery: "4860 mAh",
+        price: 899,
+        color: "black",
+        photo: "https://i01.appmifile.com/v1/MI_18455B3E4DA706226CF7535A58E875F0267/pms_1666613862.55361324.png"
+    },
+    {
+        type: "laptop",
+        name: "ASUS ROG Zephyrus G14",
+        screen: "14 inches",
+        cpu: "Ryzen 9 6900HS",
+        ram: "16 GB",
+        storage: "1 TB",
+        camera: "720p",
+        battery: "7600 mAh",
+        price: 1699,
+        color: "eclipse gray",
+        photo: "https://images-cdn.ubuy.co.in/633fec90328a6f66f3526dd3-asus-rog-zephyrus-g14-14-fhd-led.jpg"
+    },
+    {
+        type: "tablet",
+        name: "Microsoft Surface Pro 9",
+        screen: "13 inches",
+        cpu: "Intel i7-1255U",
+        ram: "16 GB",
+        storage: "512 GB",
+        camera: "10 MP",
+        battery: "6400 mAh",
+        price: 1599,
+        color: "sapphire blue",
+        photo: "https://cdn.dxomark.com/wp-content/uploads/medias/post-151145/Microsoft-Surface-Pro-9-_featured-image-packshot-review.jpg"
+    },
+    {
         type: "smartwatch",
         name: "Apple Watch Series 8",
         screen: "1.9 inches",
@@ -148,6 +284,45 @@ const items = [
         price: 399,
         color: "midnight",
         photo: "https://eshop.bh.zain.com/sites/default/files/ImagesDir/2022-09/MNHV3AEA.png"
+    },
+    {
+        type: "gaming console",
+        name: "Xbox Series X",
+        screen: "N/A",
+        cpu: "AMD Zen 2",
+        ram: "16 GB",
+        storage: "1 TB",
+        camera: "N/A",
+        battery: "N/A",
+        price: 499,
+        color: "black",
+        photo: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRnUkSlfL58Y0Vh6jXLZZZGn8utamenAMQpcA&s"
+    },
+    {
+        type: "phone",
+        name: "Sony Xperia 1 IV",
+        screen: "6.5 inches",
+        cpu: "Snapdragon 8 Gen 1",
+        ram: "12 GB",
+        storage: "512 GB",
+        camera: "12 MP",
+        battery: "5000 mAh",
+        price: 1199,
+        color: "frosted purple",
+        photo: "https://d2e6ccujb3mkqf.cloudfront.net/9b57c2b1-644c-47f0-9185-429ec7682266-1_de88756b-1d18-4ced-afec-1e4ba157601d.jpg"
+    },
+    {
+        type: "laptop",
+        name: "Lenovo ThinkPad X1 Carbon",
+        screen: "14 inches",
+        cpu: "Intel i7-1260P",
+        ram: "16 GB",
+        storage: "1 TB",
+        camera: "1080p",
+        battery: "5700 mAh",
+        price: 1899,
+        color: "black",
+        photo: "https://microless.com/cdn/products/28a3f27f9cc916daec71af0d1cf60cd0-hi.jpg"
     }
 ];
 
@@ -157,13 +332,13 @@ const items = [
 //--------------------- functions to display the objets and ther info in both products and cart page -----------------------
 //--------------------------------------------------------------------------------------------------------------------------
 
-function displayItems(itemsToDisplay, containerId, isCart = false) {
+function displayItems(itemsToDisplay, containerId, inCart = false) {
     const container = document.getElementById(containerId);
-    container.innerHTML = ''; // Clear previous items
+    container.innerHTML = ''; 
 
     itemsToDisplay.forEach((item, index) => {
         const itemDiv = document.createElement('div');
-        itemDiv.classList.add(isCart ? 'cart-item' : 'product-box');
+        itemDiv.classList.add(inCart ? 'cart-item' : 'product-box');
 
         const img = document.createElement('img');
         img.src = item.photo;
@@ -172,8 +347,8 @@ function displayItems(itemsToDisplay, containerId, isCart = false) {
         name.textContent = item.name;
 
         const info = document.createElement('div');
-        info.classList.add(isCart ? 'cart-info' : 'product-info');
-        info.innerHTML = isCart ? `
+        info.classList.add(inCart ? 'cart-info' : 'product-info');
+        info.innerHTML = inCart ? `
             <p>Price: $${item.price}</p>
             <p>Quantity: ${item.quantity}</p>
         ` : `
@@ -194,7 +369,7 @@ function displayItems(itemsToDisplay, containerId, isCart = false) {
         itemDiv.appendChild(name);
         itemDiv.appendChild(info);
 
-        if (isCart) {
+        if (inCart) {
             const addButton = document.createElement('button');
             addButton.textContent = '+';
             addButton.onclick = () => addToCart(items.findIndex(i => i.name === item.name));
@@ -225,7 +400,7 @@ function displayItems(itemsToDisplay, containerId, isCart = false) {
         container.appendChild(itemDiv);
     });
 
-    if (isCart) {
+    if (inCart) {
         updateTotalPrice();
     }
 }
@@ -238,7 +413,6 @@ function filterItems(type) {
     }
 }
 
-// Function to display cart items
 function displayCartItems() {
     const cart = JSON.parse(localStorage.getItem('cart')) || [];
     displayItems(cart, 'cart-container', true);
@@ -342,5 +516,7 @@ document.getElementById('payment-form').addEventListener('submit', function(even
     }
 
     // If all validations pass
-    alert('Payment successful!');
+    alert('Payment successful! you will receive your order soon.');
+    window.location.href = 'home.html';
+
 });
